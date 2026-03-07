@@ -24,8 +24,8 @@ public class Libro {
 
 
     
-    public String mostrarDetalles() {
-        return "Libro [titulo=" + titulo + ", autor=" + autor + ", paginas=" + paginas + "]";
+    public void mostrarDetalles() {
+        System.out.println("Libro: " + titulo + " | Autor: "+ autor + " | Páginas: " + paginas); 
     }
 
 }

@@ -8,9 +8,9 @@ public class Main {
        Libro libro2 = new Libro("Cien Años de Soledad", "Gabriel García Márquez");
        Libro libro3 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 500);
 
-         System.out.println(libro1.mostrarDetalles());
-         System.out.println(libro2.mostrarDetalles());
-         System.out.println(libro3.mostrarDetalles());
+         libro1.mostrarDetalles();
+         libro2.mostrarDetalles();
+         libro3.mostrarDetalles();
 
          // Prueba de la clase CuentaBancaria
          CuentaBancaria cuenta1 = new CuentaBancaria("Juan Pérez", 1000.0);
