@@ -30,7 +30,7 @@ public class CuentaBancaria {
         }
     }
     public void retirar(double cantidad) {
-        if(cantidad > 0) {
+        if(saldo > cantidad) {
             saldo -= cantidad;
         } else {
             System.out.println("La cantidad a retirar es inválida.");

@@ -1,9 +1,9 @@
 package com.example;
 
 public class Estudiante {
-    String nombre;
-    int edad;
-    double promedio;
+    private String nombre;
+    private int edad;
+    private double promedio;
 
     public Estudiante() {
         this.nombre = "Desconocido";
@@ -27,7 +27,11 @@ public class Estudiante {
         return edad;
     }
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad > 0) {
+            this.edad = edad;
+        } else{
+            System.out.println("Edad no permitida por el sistema");
+        }
     }
     public double getPromedio() {
         return promedio;
@@ -35,18 +39,18 @@ public class Estudiante {
     public void setPromedio(double promedio) {
         this.promedio = promedio;
     }
-    public boolean ahAprobado() {
+    public boolean haAprobado() {
         if(promedio >= 3.0) {
             return true;
         } else {
             return false;
         }
     }
-    public void mostrarInformacion() {
+    public void mostrarInfo() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Edad: " + edad);
         System.out.println("Promedio: " + promedio);
-        if (ahAprobado()) {
+        if (haAprobado()) {
             System.out.println("El estudiante ha aprobado.");
         } else {
             System.out.println("El estudiante no ha aprobado.");
